@@ -1,0 +1,137 @@
+$select-height:                     $input-height;
+$select-height-inner:               $input-line-height * 1rem;
+
+$select-zindex:                     $zindex-modal + 1;
+
+$select-padding-y:                  $form-select-padding-y;
+$select-padding-x:                  $form-select-padding-x;
+
+$select-font-family:                $input-font-family;
+$select-font-size:                  $input-font-size;
+$select-font-weight:                $input-font-weight;
+$select-line-height:                $input-line-height;
+
+$select-color:                      $form-select-color;
+$select-placeholder-color:          $input-placeholder-color;
+$select-bg:                 $form-select-bg;
+$select-bg-position:        $form-select-bg-position;
+$select-bg-size:            $form-select-bg-size;
+
+$select-border-width:               $form-select-border-width;
+$select-border-color:               $form-select-border-color;
+$select-border-radius:              $form-select-border-radius;
+$select-box-shadow:                 $form-select-box-shadow;
+$select-transition:                 $input-transition;
+
+$select-indicator-padding:          $form-select-indicator-padding;
+$select-indicator:                  $form-select-indicator;
+
+$select-focus-border-color:         $form-select-focus-border-color;
+$select-focus-width:                $form-select-focus-width;
+$select-focus-box-shadow:           $form-select-focus-box-shadow;
+
+$select-valid-border-color:         $form-feedback-valid-color;
+$select-valid-focus-box-shadow:     0 0 0 $select-focus-width rgba($select-valid-border-color, $input-btn-focus-color-opacity);
+
+$select-invalid-border-color:       $form-feedback-invalid-color;
+$select-invalid-focus-box-shadow:   0 0 0 $select-focus-width rgba($select-invalid-border-color, $input-btn-focus-color-opacity);
+
+$select-disabled-color:             $text-muted;
+$select-disabled-bg:        $form-select-disabled-bg;
+$select-disabled-border-color:      $select-border-color;
+
+$select-item-padding-y:             $select-padding-y;
+$select-item-padding-x:             $select-padding-x;
+$select-item-active-bg:     $primary;
+$select-item-hover-bg:      lighten($primary, 20);
+$select-item-focus-bg:      lighten($primary, 30);
+
+$select-group-padding-y:            $select-padding-y;
+$select-group-padding-x:            $select-padding-x * .5;
+$select-group-color:                $secondary;
+$select-group-font-weight:          $headings-font-weight;
+
+$select-multi-item-padding-y:       $badge-padding-y;
+$select-multi-item-padding-x:       $badge-padding-x;
+
+$select-options-max-height:         15rem;
+
+$select-clear-width:              .75rem;
+$select-clear-height:             .75rem;
+$select-clear-padding-y:          $btn-close-padding-y;
+$select-clear-padding-x:          $btn-close-padding-x;
+$select-clear-icon:               'black'; //str-replace($btn-close-bg, #{$btn-close-color}, #{shade-color($select-border-color, 50%)});
+$select-clear-bg:                 transparent escape-svg($select-clear-icon) center / $select-clear-height auto no-repeat;
+$select-clear-hover-bg:           transparent escape-svg($btn-close-bg) center / $select-clear-height auto no-repeat;
+
+$select-height-sm:                $input-height-sm;
+$select-height-inner-sm:          $input-line-height * 1em;
+$select-padding-y-sm:             $form-select-padding-y-sm;
+$select-padding-x-sm:             $form-select-padding-x-sm;
+$select-font-size-sm:             $form-select-font-size-sm;
+$select-border-radius-sm:         $form-select-border-radius-sm;
+$select-item-padding-y-sm:        $select-padding-y-sm;
+$select-item-padding-x-sm:        $select-padding-x-sm;
+$select-group-padding-y-sm:       $select-padding-y-sm;
+$select-group-padding-x-sm:       $select-padding-x-sm * .5;
+$select-clear-width-sm:           .5rem;
+$select-clear-height-sm:          .5rem;
+$select-clear-padding-y-sm:       .125rem;
+$select-clear-padding-x-sm:       .125rem;
+$select-clear-bg-sm:              transparent escape-svg($select-clear-icon) center / $select-clear-height-sm auto no-repeat;
+$select-clear-hover-bg-sm:        transparent escape-svg($btn-close-bg) center / $select-clear-height-sm auto no-repeat;
+
+$select-small: (
+        "height": $select-height-sm,
+        "height-inner": $select-height-inner-sm,
+        "padding-y": $select-padding-y-sm,
+        "padding-x": $select-padding-x-sm,
+        "font-size": $select-font-size-sm,
+        "border-radius": $select-border-radius-sm,
+        "item-padding-y": $select-item-padding-y-sm,
+        "item-padding-x": $select-item-padding-x-sm,
+        "group-padding-y": $select-group-padding-y-sm,
+        "group-padding-x": $select-group-padding-x-sm,
+        "clear-width": $select-clear-width-sm,
+        "clear-height": $select-clear-height-sm,
+        "clear-padding-y": $select-clear-padding-y-sm,
+        "clear-padding-x": $select-clear-padding-x-sm,
+        "clear-bg": $select-clear-bg-sm,
+        "clear-hover-bg": $select-clear-hover-bg-sm,
+);
+
+$select-height-lg:                $input-height-lg;
+$select-height-inner-lg:          $input-line-height * 1em;
+$select-padding-y-lg:             $form-select-padding-y-lg;
+$select-padding-x-lg:             $form-select-padding-x-lg;
+$select-font-size-lg:             $form-select-font-size-lg;
+$select-border-radius-lg:         $form-select-border-radius-lg;
+$select-item-padding-y-lg:        $select-padding-y-lg;
+$select-item-padding-x-lg:        $select-padding-x-lg;
+$select-group-padding-y-lg:       $select-padding-y-lg;
+$select-group-padding-x-lg:       $select-padding-x-lg * .5;
+$select-clear-width-lg:           1rem;
+$select-clear-height-lg:          1rem;
+$select-clear-padding-y-lg:       .5rem;
+$select-clear-padding-x-lg:       .5rem;
+$select-clear-bg-lg:              transparent escape-svg($select-clear-icon) center / $select-clear-height-lg auto no-repeat;
+$select-clear-hover-bg-lg:        transparent escape-svg($btn-close-bg) center / $select-clear-height-lg auto no-repeat;
+
+$select-large: (
+        "height": $select-height-lg,
+        "height-inner": $select-height-inner-lg,
+        "padding-y": $select-padding-y-lg,
+        "padding-x": $select-padding-x-lg,
+        "font-size": $select-font-size-lg,
+        "border-radius": $select-border-radius-lg,
+        "item-padding-y": $select-item-padding-y-lg,
+        "item-padding-x": $select-item-padding-x-lg,
+        "group-padding-y": $select-group-padding-y-lg,
+        "group-padding-x": $select-group-padding-x-lg,
+        "clear-width": $select-clear-width-lg,
+        "clear-height": $select-clear-height-lg,
+        "clear-padding-y": $select-clear-padding-y-lg,
+        "clear-padding-x": $select-clear-padding-x-lg,
+        "clear-bg": $select-clear-bg-lg,
+        "clear-hover-bg": $select-clear-hover-bg-lg,
+);

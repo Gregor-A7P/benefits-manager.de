@@ -1,0 +1,52 @@
+$grid-breakpoints: (
+    xs:                                 0,
+    sm:                                 576px,
+    md:                                 768px,
+    lg:                                 992px,
+    xl:                                 1280px,
+    xxl:                                1436px
+);
+
+$container-max-widths: (
+    sm:                                 740px,
+    md:                                 920px,
+    lg:                                 1160px,
+    xl:                                 1340px,
+    xxl:                                1520px
+);
+
+
+$grid-columns:                          12;
+$grid-gutter-width:                     1.5rem;
+$grid-row-columns:                      6;
+
+
+$spacer:                                1rem;
+
+$gutters: (
+    0:                              0,
+    1:                              $spacer * .25,
+    2:                              $spacer * .5,
+    3:                              $spacer,
+    4:                              $spacer * 1.5,
+    5:                              $spacer * 3,
+    6:                              $spacer * 4,
+    7:                              $spacer * 4.75,
+    8:                              $spacer * 5.5,
+    9:                              $spacer * 6.25,
+    10:                             $spacer * 7
+);
+
+$spacers: (
+    0:                              0,
+    1:                              $spacer * .25,
+    2:                              $spacer * .5,
+    3:                              $spacer,
+    4:                              $spacer * 1.5,
+    5:                              $spacer * 3,
+    6:                              $spacer * 4,
+    7:                              $spacer * 4.75,
+    8:                              $spacer * 5.5,
+    9:                              $spacer * 6.25,
+    10:                             $spacer * 7
+);

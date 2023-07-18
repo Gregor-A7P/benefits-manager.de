@@ -1,0 +1,9 @@
+{% extends 'frontend/base/master' %}
+
+{% block layout %}
+    {% include 'frontend/base/partials/header/default' %}
+    <main class="wrapper auth-wrapper">
+        {% block content %}{% endblock %}
+    </main>
+    {% include 'frontend/base/partials/footer/default' %}
+{% endblock %}

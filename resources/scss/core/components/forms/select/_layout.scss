@@ -1,0 +1,91 @@
+// Base layout
+.select2-container--bootstrap-5 {
+  display: block;
+  @include box-shadow($select-box-shadow);
+
+  @at-root select + & {
+    z-index: 1;
+  }
+
+  *:focus {
+    outline: 0;
+  }
+
+  // Input
+  .select2-selection {
+    width: 100%;
+    min-height: $select-height;
+    padding: $select-padding-y $select-padding-x;
+    font-family: $select-font-family;
+    @include font-size($select-font-size);
+    font-weight: $select-font-weight;
+    line-height: $select-line-height;
+    color: $select-color;
+    background-color: $select-bg;
+    border: $select-border-width solid $select-border-color;
+    @include border-radius($select-border-radius, 0);
+    @include box-shadow($select-box-shadow);
+    @include transition($select-transition);
+    appearance: none;
+  }
+
+  // Focused/Open Input
+  &.select2-container--focus,
+  &.select2-container--open {
+    .select2-selection {
+      border-color: $select-focus-border-color;
+      box-shadow: $select-focus-box-shadow;
+    }
+  }
+
+  // Hide bottom border when open and below
+  &.select2-container--open.select2-container--below .select2-selection {
+    border-bottom: 0 solid transparent;
+    @include border-bottom-radius(0);
+  }
+
+  // Hide top border when open and above
+  &.select2-container--open.select2-container--above .select2-selection {
+    border-top: 0 solid transparent;
+    @include border-top-radius(0);
+  }
+
+  // Placeholder Width
+  .select2-search {
+    width: 100%;
+  }
+
+  .select2-search--inline {
+    .select2-search__field {
+      vertical-align: top;
+    }
+  }
+
+  // Clear Button
+  .select2-selection--single,
+  .select2-selection--multiple {
+    .select2-selection__clear {
+      position: absolute;
+      top: 50%;
+      right: $select-indicator-padding;
+      width: $select-clear-width;
+      height: $select-clear-height;
+      padding: $select-clear-padding-y $select-clear-padding-x;
+      overflow: hidden;
+      text-indent: 100%;
+      white-space: nowrap;
+      background: $select-clear-bg;
+      transform: translateY(-50%);
+
+      // Change icon on hover
+      &:hover {
+        background: $select-clear-hover-bg;
+      }
+
+      // Hide children
+      >span {
+        display: none;
+      }
+    }
+  }
+}

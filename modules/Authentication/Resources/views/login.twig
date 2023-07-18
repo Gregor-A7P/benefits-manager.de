@@ -1,0 +1,23 @@
+<form action="" method="POST" autocomplete="off" class="row g-3">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="#authenticationUsername" class="form-label">
+                {{ trans('authentication::authentication.username.field') }}
+            </label>
+            <input type="text" class="form-control form-control-pro" id="authenticationUsername" placeholder="{{ trans('authentication::authentication.username.placeholder') }}">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="#authenticationPassword" class="form-label">
+                {{ trans('authentication::authentication.password.field') }}
+            </label>
+            <input type="password" class="form-control form-control-pro" id="authenticationPassword" placeholder="{{ trans('authentication::authentication.password.placeholder') }}">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <button class="btn btn-primary w-100 mt-5">
+            {{ trans('authentication::authentication.submit') }}
+        </button>
+    </div>
+</form>

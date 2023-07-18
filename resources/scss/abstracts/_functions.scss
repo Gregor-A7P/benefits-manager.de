@@ -1,0 +1,18 @@
+// Calculate brightness of a given color.
+@function calculateBrightness($color) {
+    @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)) / 255 * 100%;
+}
+
+// Comparesimg contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
+@function color-contrast($color, $dark: $dark-text, $light: $light-text) {
+    @if $color == null {
+        @return null;
+    }
+    @else {
+        $color-brightness: calculateBrightness($color);
+        $light-text-brightness: calculateBrightness($light);
+        $dark-text-brightness: calculateBrightness($dark);
+
+        @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);
+    }
+}

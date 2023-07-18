@@ -1,0 +1,180 @@
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+@import 'core';
+@import 'sizing';
+@import 'fixed-width';
+@import 'list';
+@import 'bordered-pulled';
+@import 'animated';
+@import 'rotated-flipped';
+@import 'stacked';
+@import 'icons';
+@import 'screen-reader';
+
+:root, :host {
+    @if (map-get($font-awesome-styles, 'regular') == true) {
+        --#{$fa-css-prefix}-font-regular: normal 400 1em/1 "#{ $fa-style-family }";
+    }
+    @if map-get($font-awesome-styles, 'solid') {
+        --#{$fa-css-prefix}-font-solid: normal 900 1em/1 "#{ $fa-style-family }";
+    }
+    @if map-get($font-awesome-styles, 'thin') {
+        --#{$fa-css-prefix}-font-thin: normal 100 1em/1 "#{ $fa-style-family }";
+    }
+    @if map-get($font-awesome-styles, 'light') {
+        --#{$fa-css-prefix}-font-light: normal 300 1em/1 "#{ $fa-style-family }";
+    }
+    @if map-get($font-awesome-styles, 'brands') {
+        --#{$fa-css-prefix}-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+    }
+    @if map-get($font-awesome-styles, 'duotone') {
+        --#{$fa-css-prefix}-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+    }
+}
+@if (map-get($font-awesome-styles, 'regular') == true) {
+    @font-face {
+        font-family: 'Font Awesome 6 Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: $fa-font-display;
+        src: url('#{$fa-font-path}/fa-regular-400.woff2') format('woff2'),
+        url('#{$fa-font-path}/fa-regular-400.ttf') format('truetype');
+    }
+    .far,
+    .#{$fa-css-prefix}-regular {
+        font-family: 'Font Awesome 6 Pro';
+        font-weight: 400;
+    }
+}
+@if map-get($font-awesome-styles, 'solid') {
+    @font-face {
+        font-family: 'Font Awesome 6 Pro';
+        font-style: normal;
+        font-weight: 900;
+        font-display: $fa-font-display;
+        src: url('#{$fa-font-path}/fa-solid-900.woff2') format('woff2'),
+        url('#{$fa-font-path}/fa-solid-900.ttf') format('truetype');
+    }
+
+    .fas,
+    .#{$fa-css-prefix}-solid {
+        font-family: 'Font Awesome 6 Pro';
+        font-weight: 900;
+    }
+
+}
+@if map-get($font-awesome-styles, 'thin') {
+    @font-face {
+        font-family: 'Font Awesome 6 Pro';
+        font-style: normal;
+        font-weight: 100;
+        font-display: $fa-font-display;
+        src: url('#{$fa-font-path}/fa-thin-100.woff2') format('woff2'),
+        url('#{$fa-font-path}/fa-thin-100.ttf') format('truetype');
+    }
+
+    .fat,
+    .#{$fa-css-prefix}-thin {
+        font-family: 'Font Awesome 6 Pro';
+        font-weight: 100;
+    }
+
+}
+@if map-get($font-awesome-styles, 'light') {
+    @font-face {
+        font-family: 'Font Awesome 6 Pro';
+        font-style: normal;
+        font-weight: 300;
+        font-display: $fa-font-display;
+        src: url('#{$fa-font-path}/fa-light-300.woff2') format('woff2'),
+        url('#{$fa-font-path}/fa-light-300.ttf') format('truetype');
+    }
+
+    .fal,
+    .#{$fa-css-prefix}-light {
+        font-family: 'Font Awesome 6 Pro';
+        font-weight: 300;
+    }
+
+}
+@if map-get($font-awesome-styles, 'brands') {
+    @font-face {
+        font-family: 'Font Awesome 6 Brands';
+        font-style: normal;
+        font-weight: 400;
+        font-display: $fa-font-display;
+        src: url('#{$fa-font-path}/fa-brands-400.woff2') format('woff2'),
+        url('#{$fa-font-path}/fa-brands-400.ttf') format('truetype');
+    }
+
+    .fab,
+    .#{$fa-css-prefix}-brands {
+        font-family: 'Font Awesome 6 Brands';
+        font-weight: 400;
+    }
+
+    @each $name, $icon in $fa-brand-icons {
+        .#{$fa-css-prefix}-#{$name}:before { content: unquote("\"#{ $icon }\""); }
+    }
+}
+@if map-get($font-awesome-styles, 'duotone') {
+    @each $name, $icon in $fa-icons {
+        .fad.#{$fa-css-prefix}-#{$name}::after, .#{$fa-css-prefix}-duotone.#{$fa-css-prefix}-#{$name}::after {
+            content: unquote("\"#{ $icon }#{ $icon }\"");
+        }
+    }
+    @font-face {
+        font-family: 'Font Awesome 6 Duotone';
+        font-style: normal;
+        font-weight: 900;
+        font-display: $fa-font-display;
+        src: url('#{$fa-font-path}/fa-duotone-900.woff2') format('woff2'),
+        url('#{$fa-font-path}/fa-duotone-900.ttf') format('truetype');
+    }
+
+    .fad,
+    .#{$fa-css-prefix}-duotone {
+        position: relative;
+        font-family: 'Font Awesome 6 Duotone';
+        font-weight: 900;
+        letter-spacing: normal;
+    }
+
+    .fad::before,
+    .#{$fa-css-prefix}-duotone::before {
+        position: absolute;
+        color: var(--#{$fa-css-prefix}-primary-color, inherit);
+        opacity: var(--#{$fa-css-prefix}-primary-opacity, #{$fa-primary-opacity});
+    }
+
+    .fad::after,
+    .#{$fa-css-prefix}-duotone::after {
+        color: var(--#{$fa-css-prefix}-secondary-color, inherit);
+        opacity: var(--#{$fa-css-prefix}-secondary-opacity, #{$fa-secondary-opacity});
+    }
+
+    .#{$fa-css-prefix}-swap-opacity .fad::before,
+    .#{$fa-css-prefix}-swap-opacity .fa-duotone::before,
+    .fad.#{$fa-css-prefix}-swap-opacity::before,
+    .fa-duotone.#{$fa-css-prefix}-swap-opacity::before {
+        opacity: var(--#{$fa-css-prefix}-secondary-opacity, #{$fa-secondary-opacity});
+    }
+
+    .#{$fa-css-prefix}-swap-opacity .fad::after,
+    .#{$fa-css-prefix}-swap-opacity .fa-duotone::after,
+    .fad.#{$fa-css-prefix}-swap-opacity::after,
+    .fa-duotone.#{$fa-css-prefix}-swap-opacity::after {
+        opacity: var(--#{$fa-css-prefix}-primary-opacity, #{$fa-primary-opacity});
+    }
+
+    .fad.#{$fa-css-prefix}-inverse,
+    .#{$fa-css-prefix}-duotone.#{$fa-css-prefix}-inverse {
+        color: var(--#{$fa-css-prefix}-inverse, $fa-inverse);
+    }
+
+    .fad.#{$fa-css-prefix}-stack-1x, .fad.#{$fa-css-prefix}-stack-2x,
+    .#{$fa-css-prefix}-duotone.#{$fa-css-prefix}-stack-1x, .#{$fa-css-prefix}-duotone.#{$fa-css-prefix}-stack-2x {
+        position: absolute;
+    }
+}

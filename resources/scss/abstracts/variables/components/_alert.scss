@@ -1,0 +1,13 @@
+$alert-font-size:       .9rem;
+$alert-title-size:      1.15rem;
+$alert-states: (
+        primary     :       $primary,
+        secondary   :       $secondary,
+        success     :       $success,
+        info        :       $info,
+        warning     :       $warning,
+        danger      :       $danger,
+);
+$alert-pro-box-shadow:  0 4px 15px 0 rgba(31, 43, 58, 0.1);
+$alert-pro-background:  #fff;
+$alert-pro-color:       $dark;

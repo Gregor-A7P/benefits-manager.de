@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ app.locale() }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+{% block meta %}
+    <meta name="description" content="{{ meta.description }}">
+    <meta name="keywords" content="{{ meta.keywords }}">
+    <meta name="robots" content="{{ meta.robots }}">
+{% endblock %}
+    <title>{{ config('app.name') }}</title>
+    <link rel="stylesheet" href="{{ asset('resources/css/main.css') }}">
+{% block custom_stylesheet %}{% endblock %}
+{% block custom_head_javascript %}{% endblock %}
+</head>
+<body>
+{% block layout %}{% endblock %}
+
+<script src="{{ asset('resources/js/bundle.js') }}"></script>
+<script src="{{ asset('resources/js/scripts.js') }}"></script>
+{% block custom_javascript %}{% endblock %}
+</body>
+</html>

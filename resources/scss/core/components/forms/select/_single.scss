@@ -1,0 +1,29 @@
+.select2-container--bootstrap-5 {
+  .select2-selection--single {
+    padding: $select-padding-y $select-indicator-padding $select-padding-y $select-padding-x;
+    background-image: escape-svg($select-indicator);
+    background-repeat: no-repeat;
+    background-position: $select-bg-position;
+    background-size: $select-bg-size;
+
+    // Rendered view
+    .select2-selection__rendered {
+      padding: 0;
+      font-weight: $select-font-weight;
+      line-height: $select-line-height;
+      color: $select-color;
+
+      // Placeholder
+      .select2-selection__placeholder {
+        font-weight: $select-font-weight;
+        line-height: $select-line-height;
+        color: $select-placeholder-color;
+      }
+
+      // Disable arrow
+      .select2-selection__arrow {
+        display: none;
+      }
+    }
+  }
+}

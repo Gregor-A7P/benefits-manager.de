@@ -1,0 +1,48 @@
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $display-font-weight;
+}
+
+p, li, a, blockquote {
+    font-size: $p-font-size;
+    line-height: $p-line-height;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+footer,
+.footer {
+    margin-top: auto;
+    @include font-size(.875rem);
+}
+
+.wrapper {
+    flex: 1 1 100%;
+}
+
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-section {
+    &:first-child {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+    &:last-child {
+        margin-bottom: 4rem;
+    }
+    margin-top: 4rem;
+}

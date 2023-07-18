@@ -1,0 +1,21 @@
+$variable-prefix:                       'a7p-';
+$prefix:                                $variable-prefix;
+
+$webfonts-path:                         '/resources/webfonts';
+
+$font-awesome-styles: (
+    regular:                            true,
+    solid:                              true,
+    thin:                               true,
+    light:                              true,
+    brands:                             true,
+    duotone:                            false
+);
+
+$enable-dark-mode:                      false;
+
+$enable-rounded:                        true;
+
+$enable-negative-margins:               true;
+
+$enable-important-utilities:            true;
